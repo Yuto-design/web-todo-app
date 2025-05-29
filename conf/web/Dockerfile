@@ -35,7 +35,7 @@ RUN apt -y install \
 RUN pecl install imagick \
     && docker-php-ext-enable imagick
 
-RUN docker-php-ext-install pdo_pgsql zip
+RUN docker-php-ext-install pdo_mysql pdo_pgsql zip
 
 RUN a2enmod rewrite
 
