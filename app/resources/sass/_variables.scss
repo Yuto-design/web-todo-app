@@ -1,7 +1,24 @@
 // Body
-$body-bg: #f8fafc;
+$body-bg: #f4f4f4;
 
 // Typography
 $font-family-sans-serif: 'Nunito', sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
+
+// Custom colors
+$navbar-light-brand-color: #fff;
+$navbar-light-brand-hover-color: #fff;
+$navbar-light-color: #fff;
+$navbar-light-hover-color: #fff;
+$card-cap-bg: #d2e0d9;
+$card-border-width: 0px;
+$nav-link-color: #fff;
+$dropdown-bg: #d2e0d9;
+$dropdown-link-hover-bg: #658e7c;
+$dropdown-link-hover-color: #fff;
+
+// form-control background color override
+.form-control {
+    background-color: #fff !important;
+}

@@ -6,15 +6,13 @@ use App\Models\TodoItem;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class TodoController extends Controller
-{
-    public function __construct()
-    {
+class TodoController extends Controller{
+    public function __construct(){
         $this->middleware('auth');
     }
 
     public function index(Request $request){
-        if($request->has('done')){
+        if ($request->has('done')) {
             $todos = TodoItem::where(['user_id' => Auth::id(), 'is_done' => true])
                 ->orderBy('created_at', 'desc')
                 ->get();
@@ -23,11 +21,11 @@ class TodoController extends Controller
                 ->orderBy('created_at', 'desc')
                 ->get();
         }
-
         return view('todo.index', compact('todos'));
     }
 
-    public function create(){
+    public function create()
+    {
         return view('todo.create');
     }
 
